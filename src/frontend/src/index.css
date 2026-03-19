@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+    /* Dark corporate palette — always dark */
+    --background: 0.13 0.012 250;
+    --foreground: 1 0 0;
+    --card: 0.16 0.012 250;
+    --card-foreground: 1 0 0;
+    --popover: 0.18 0.012 250;
+    --popover-foreground: 1 0 0;
+    --primary: 0.52 0.12 248;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.24 0.012 250;
+    --secondary-foreground: 0.88 0.008 250;
+    --muted: 0.2 0.012 250;
+    --muted-foreground: 0.68 0.01 250;
+    --accent: 0.65 0.13 230;
+    --accent-foreground: 0.13 0.012 250;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.24 0.012 250;
+    --input: 0.2 0.012 250;
+    --ring: 0.52 0.12 248;
+    --chart-1: 0.52 0.12 248;
+    --chart-2: 0.65 0.13 230;
+    --chart-3: 0.68 0.01 250;
+    --chart-4: 0.83 0.008 250;
+    --chart-5: 0.4 0.1 248;
+    --sidebar: 0.16 0.012 250;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.52 0.12 248;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.2 0.012 250;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.24 0.012 250;
+    --sidebar-ring: 0.52 0.12 248;
+    /* Custom brand tokens */
+    --brand-blue: 0.52 0.12 248;
+    --brand-cyan: 0.65 0.13 230;
+    --brand-header: 0.18 0.012 250;
+    --brand-divider: 0.24 0.012 250;
+    --brand-hero-light: 0.88 0.008 250;
+    --brand-hero-dark: 0.19 0.012 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", system-ui, sans-serif;
+  }
+}
